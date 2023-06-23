@@ -9,4 +9,7 @@
 {% endblock %}
 
 {% block content %}
+    {% for post in psts %}
+        <p>{{ post.title }}</p>
+    {% endfor %}
 {% endblock %}

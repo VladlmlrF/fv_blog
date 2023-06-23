@@ -1,10 +1,10 @@
 from flask import Flask, render_template
 from config import Configuration
+from flask_sqlalchemy import SQLAlchemy
 
 
 app = Flask(__name__)
 app.config.from_object(Configuration)
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+db = SQLAlchemy(app)
+
